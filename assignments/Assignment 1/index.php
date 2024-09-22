@@ -42,13 +42,13 @@
   </div>
 
   <div class="col-md-2">
-  <input class="form-check-input" type="radio" name="radio" id="maleRadio">
+  <input class="form-check-input" type="radio" name="maleOrFemale" id="maleRadio">
   <label class="form-check-label" for="maleRadio">
     Male
   </label>
 </div>
 <div class="col-md-2">
-  <input class="form-check-input" type="radio" name="radio" id="femaleRadio">
+  <input class="form-check-input" type="radio" name="maleOrFemale" id="femaleRadio">
   <label class="form-check-label" for="femaleRadio">
     Female
   </label>

@@ -1,12 +1,12 @@
 <?php
+//Sets the output default to blank
+$output = "";
 
-$msg = "";
-
+//Just calls the handler if the button is clicked
 if(isset($_POST['createDirectoryButton'])){
   require_once 'fileHandler.php';
   $fileAdd = new fileHandler();
-  //$fileAdd -> createFile();
-  $output = $fileAdd -> createFile();
+  $output = $fileAdd->createFile();
 }
 
 ?>
@@ -30,7 +30,7 @@ if(isset($_POST['createDirectoryButton'])){
 
     <div class="mt-4">
       <?php if (!empty($output)): ?>
-        <p><?php echo htmlspecialchars($output); ?></p>
+        <p><?php echo $output; ?></p>
       <?php endif; ?>
 
 

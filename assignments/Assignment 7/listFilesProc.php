@@ -15,22 +15,18 @@ class listWriter {
                 $links = [];
                 
                 foreach ($records as $record) {
-                    // Replace 'yourLinkPrefix' with the actual URL or link structure you want to use
-                    $link = '<a href="' . $record['filePath'] . '">' . htmlspecialchars($record['fileName']) . '</a>';
+                    $link = '<li>' . '<a target=\'_blank\' href="' . $record['filePath'] . '">' . htmlspecialchars($record['fileName']) . '</a>' . '</li>';
                     $links[] = $link;
                 }
                 
-                // Join all links into a single string
-                $linkString = implode("\n", $links); 
+                //Builds string
+                $linkString = implode("", $links); 
                 
-                return $linkString;
+                return "<ul>" . $linkString . "</ul>";
 			}
 			else {
-				return 'no names found';
+				return 'No files found';
 			}
-
-        return "writeList being called";
-
+        }
     }
-}
 }
